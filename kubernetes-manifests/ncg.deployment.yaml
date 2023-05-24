@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: erroneous-data-detector
+  labels:
+    app: erroneous-data-detector
+    tier: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: erroneous-data-detector
+      tier: app
+  template:
+    metadata:
+      labels:
+        app: erroneous-data-detector
+        tier: app
+    spec:
+      containers:
+        - name: erroneous-data-detector
+          image: erroneous-data-detector
+          ports:
+            - containerPort: 8080
+          # env:
+          # - name: PORT
+          #   value: "8080"

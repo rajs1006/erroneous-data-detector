@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: erroneous-data-detector-service
+  labels:
+    app: erroneous-data-detector
+  namespace: default
+  selfLink: /api/v1/namespaces/default/services/erroneous-data-detector-service
+spec:
+  externalTrafficPolicy: Cluster
+  ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    app: erroneous-data-detector
+  sessionAffinity: None
+  type: LoadBalancer

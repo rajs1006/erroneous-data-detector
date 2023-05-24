@@ -1,0 +1,55 @@
+DATA:
+  timeseriesColumn                     :                BKN_MENGENTYP
+  gasColumn                            :                ID_BKN_MARKTGEBIET
+  netzColumn                           :                ID_BKN_NETZ
+  bilanzColumn                         :                ID_BKN_BILANZOBJ
+
+  preliminaryOrBestOfColumn            :                BKN_QUALITAET
+  gasDayColumn                         :                GASTAG
+  dailyValueColumn                     :                TAGESWERT
+  correctedColumn                      :                TAGESWERT_CORRECTED
+
+  idColumn                             :                id
+  groupByColumns                       :                [
+                                                        "ID_BKN_MARKTGEBIET", 
+                                                        "ID_BKN_NETZ", 
+                                                        "ID_BKN_BILANZOBJ"
+                                                      ]
+  allColumns                           :                [
+                                                        "MANDANT",
+                                                        "ID_WERTEGANG",
+                                                        "ID_BKN_NETZ",
+                                                        "ID_BKN_MARKTGEBIET",
+                                                        "ID_BKN_BILANZOBJ",
+                                                        "ID_BKN_NETZUEBERGANG",
+                                                        "BKN_MENGENTYP",
+                                                        "GASTAG",
+                                                        "TAGESWERT",
+                                                        "id",
+                                                        "TAGESWERT_CORRECTED",
+                                                      ]
+  numericColumns                       :                [
+                                                        "MANDANT",
+                                                        "ID_WERTEGANG",
+                                                        "ID_BKN_NETZ",
+                                                        "ID_BKN_MARKTGEBIET",
+                                                        "ID_BKN_BILANZOBJ",
+                                                        "ID_BKN_NETZUEBERGANG",
+                                                        "TAGESWERT",
+                                                      ]
+
+MODEL:
+  paramFilename                         :                filename
+
+  predictorFile                         :                __predictor
+  detectorFile                          :                __detector
+  modelFileExt                          :                .model
+
+  scalarFileExt                         :                .scalar
+
+  pValue                                :                pValue
+  scalar                                :                scalar
+
+  dataFileExtn                          :                .data
+  csvFileExtn                           :                .csv
+  protocol                              :                4
